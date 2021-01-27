@@ -33,8 +33,8 @@ RUN	echo "[setup] Installing Rclone...." \
 
 # Install aria2c static binary
 RUN echo "[setup] Installing Aria2c...." \
-	&& wget -q https://github.com/CypherpunkSamurai/TARclonef/raw/master/aria2-1.35.0-static-linux-amd64_patch_P3TERX.tar.gz \
-	&& tar xf aria2-1.35.0-static-linux-amd64_patch_P3TERX.tar.gz \
+	&& wget -q https://github.com/P3TERX/Aria2-Pro-Core/releases/download/1.35.0_2020.12.29/aria2-1.35.0-static-linux-amd64.tar.gz \
+	&& tar xf aria2-1.35.0-static-linux-amd64.tar.gz \
 	&& chmod 755 aria2c \
 	&& rm -fr aria2-1.35.0-static-*
 
