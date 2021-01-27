@@ -20,6 +20,7 @@ RUN mkdir -p /app/web \
 	&& unzip -q a.zip \
 	&& rm -rf *.zip A* a*
 
+RUN mv apple-touch-icon.png /app/web
 
 # Install rclone static binary
 RUN	echo "[setup] Installing Rclone...." \
