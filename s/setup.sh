@@ -31,8 +31,8 @@ mkdir -p downloads
 
 #Configure Trackkers
 echo "[setup] Downloading TrackerDB...."
-wget -q https://github.com/CypherpunkSamurai/TARclonef/raw/master/dht.dat
-wget -q https://github.com/CypherpunkSamurai/TARclonef/raw/master/dht6.dat
+wget -q https://github.com/P3TERX/aria2.conf/raw/master/dht.dat
+wget -q https://github.com/P3TERX/aria2.conf/raw/master/dht6.dat
 echo "[setup] Adding Trackers...."
 tracker_list=$(curl -s https://trackerslist.com/all_aria2.txt)
 echo "bt-tracker=$tracker_list" >> aria2.conf
