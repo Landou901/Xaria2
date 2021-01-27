@@ -20,7 +20,7 @@ RUN mkdir -p /app/web \
 	&& unzip -q a.zip \
 	&& rm -rf *.zip A* a*
 
-RUN wget https://github.com/Landou901/Xaria2/raw/master/apple-touch-icon.png
+RUN wget https://github.com/Landou901/Xaria2/raw/master/apple-touch-icon.png \
         && mv apple-touch-icon.png /app/web
 
 # Install rclone static binary
