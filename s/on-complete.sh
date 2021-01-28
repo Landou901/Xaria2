@@ -129,7 +129,7 @@ elif [ -e "${TOP_PATH}.aria2" ]; then
     DOT_ARIA2_FILE="${TOP_PATH}.aria2"
 fi
 
-if [ "${TOP_PATH}" == "${FILE_PATH}" ] && [ $2 -eq 1 ]; then # 普通单文件下载，移动文件到设定的网盘文件夹。
+if [ "${TOP_PATH}" = "${FILE_PATH}" ] && [ $2 -eq 1 ]; then # 普通单文件下载，移动文件到设定的网盘文件夹。
     UPLOAD_PATH="${FILE_PATH}"
     REMOTE_PATH="${RCLONE_DESTINATION}/"
     REMOTE_PATH_2="${RCLONE_DESTINATION_2}/"
@@ -139,7 +139,7 @@ elif [ "${TOP_PATH}" != "${FILE_PATH}" ] && [ $2 -gt 1 ]; then # BT下载（文�
     UPLOAD_PATH="${TOP_PATH}"
     REMOTE_PATH="${RCLONE_DESTINATION}/${REMOVE_DOWNLOAD_PATH%%/*}"
 	REMOTE_PATH_2="${RCLONE_DESTINATION_2}/${REMOVE_DOWNLOAD_PATH%%/*}"
-    CLEAN_UP
+    #CLEAN_UP
     UPLOAD
     exit 0
 elif [ "${TOP_PATH}" != "${FILE_PATH}" ] && [ $2 -eq 1 ]; then # 第三方度盘工具下载（子文件夹或多级目录等情况下的单文件下载）、BT下载（文件夹内文件数等于1），移动文件到设定的网盘文件夹下的相同路径文件夹。
