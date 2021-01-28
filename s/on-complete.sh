@@ -129,7 +129,7 @@ elif [ -e "${TOP_PATH}.aria2" ]; then
     DOT_ARIA2_FILE="${TOP_PATH}.aria2"
 fi
 
-if [ "${TOP_PATH}" = "${FILE_PATH}" ] && [ $2 -eq 1 ]; then # 普通单文件下载，移动文件到设定的网盘文件夹。
+if [ "${TOP_PATH}" == "${FILE_PATH}" ] && [ $2 -eq 1 ]; then # 普通单文件下载，移动文件到设定的网盘文件夹。
     UPLOAD_PATH="${FILE_PATH}"
     REMOTE_PATH="${RCLONE_DESTINATION}/"
     REMOTE_PATH_2="${RCLONE_DESTINATION_2}/"
